@@ -1,15 +1,16 @@
-DROP DATABASE IF EXISTS CollegeDB;
-CREATE DATABASE CollegeDB;
-USE CollegeDB;
+CREATE TABLE Marksheet (
+    RollNo NUMBER(5) PRIMARY KEY,
+    Name VARCHAR2(20),
+    Department VARCHAR2(10),
+    Marks NUMBER(5)
+);
 
--- Create Employee table
+INSERT INTO Marksheet VALUES (1, 'Arun', 'CSE', 85);
+INSERT INTO Marksheet VALUES (2, 'Divya', 'IT', 78);
+INSERT INTO Marksheet VALUES (3, 'Karthik', 'CSE', 92);
+INSERT INTO Marksheet VALUES (4, 'Nisha', 'ECE', 67);
+INSERT INTO Marksheet VALUES (5, 'Rahul', 'IT', 88);
 
--- Insert records
-
--- COUNT()
-
--- MAX()
-
--- MIN()
-
--- AVG()
+SELECT * FROM Marksheet
+WHERE Marks > 80
+ORDER BY Marks DESC;
